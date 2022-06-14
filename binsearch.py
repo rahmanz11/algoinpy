@@ -8,12 +8,10 @@ class BinSearch:
         high = len(self.array) - 1
         step = 1
         while low <= high:
-            print("step", step)
-            step = step + 1
             mid = (low + high) // 2
-            print("mid", mid)
             guess = self.array[mid]
-            print("step %s mid %s guess %s", step, mid, guess)
+            print("step ", step, " mid ", mid , " guess ", guess)
+            step = step + 1
             if guess > self.item:
                 high = mid - 1
             elif guess < self.item:

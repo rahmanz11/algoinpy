@@ -1,11 +1,11 @@
 def find_smallest_value(arr):
-    smallest_index = 0
+    smallest_value_index = 0
     smallest_value = arr[0]
     for i in range(1, len(arr)):
         if arr[i] < smallest_value:
             smallest_value = arr[i]
-            smallest_index = i
-    return smallest_index
+            smallest_value_index = i
+    return smallest_value_index
     
 class SelSort:
     def __init__(self, array) -> None:
@@ -14,8 +14,8 @@ class SelSort:
     def selection_sort(self):
         new_arr = []
         for i in range (len (self.array)):
-            smallest_index = find_smallest_value(self.array)
-            new_arr.append(self.array.pop(smallest_index))
+            smallest_value_index = find_smallest_value(self.array)
+            new_arr.append(self.array.pop(smallest_value_index))
 
         return new_arr
 
